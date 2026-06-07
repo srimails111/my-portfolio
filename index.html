@@ -37,7 +37,7 @@ nav{background:rgba(8,32,62,0.97);padding:1rem 2rem;display:flex;justify-content
 .about-text p{color:var(--text-muted);margin-bottom:1rem;font-size:0.95rem;}
 .about-text p strong{color:#fff;font-weight:500;}
 .about-photo-wrap{display:flex;flex-direction:column;align-items:center;gap:1.5rem;}
-.about-photo{width:200px;height:240px;border-radius:12px;object-fit:cover;object-position:center top;border:3px solid rgba(85,124,147,0.5);box-shadow:0 8px 32px rgba(0,0,0,0.3);}
+.about-photo{width:200px;height:200px;border-radius:50%;object-fit:cover;object-position:center top;border:3px solid rgba(85,124,147,0.5);box-shadow:0 0 0 6px rgba(85,124,147,0.12),0 8px 32px rgba(0,0,0,0.3);display:block;}
 .stats{display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;width:100%;}
 .stat{background:var(--card-bg);border:1px solid var(--card-border);border-radius:0.75rem;padding:1.25rem;text-align:center;}
 .stat-n{font-family:'Playfair Display',serif;font-size:2rem;color:var(--teal-light);line-height:1;}
@@ -139,13 +139,9 @@ footer{border-top:1px solid var(--card-border);padding:1.5rem 2rem;display:flex;
     </div>
     <div class="about-photo-wrap">
       <img class="about-photo" 
-        src="https://mwtwveearmxnucojgqnn.supabase.co/storage/v1/object/public/assets/1776604066167.jpeg" 
+        src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCADIAKADASIAAhEBAxEB/8QAHAAAAgMBAQEBAAAAAAAAAAAAAAUEBgcDAgEI/8QAOBAAAgIBAwMDAgQFAwMFAAAAAQIDBAUREiExBhNBUWEicRQygZGhsRUjQlLB0fAkM2Lh8f/EABoBAAMBAQEBAAAAAAAAAAAAAAIDBAEFBgD/xAAkEQACAgICAgIDAQAAAAAAAAAAAQIRAyESMUEEE1FhcSL/2gAMAwEAAhEDEQA/ANEKMNqFdFcpyk1FLdtslBxXTM2lRBzryaxqdvC+KpfgS6I0zGqNNEK4LpFJGdRxbpJyk5Sd23u2/NkUnJyk5Sd23u2/NmcOfqFEoxjGMVGKSSWySRFc0+i6KhCta12JaJe7MqblJ7yk5Se7k9W382QXXQpqc5zjCEVtKUnpSXqzKqdOVuN91lcoQTainvJ+SXmbeVeyUYVxUI90pP6ItGrGdFUZ2zlOSWspPVt/NnnXVZHJzhVXKfTSceqKXpv5nPkyyx7EowlJ7JJyfp5s9bK5VTjBqS1SfVFr1RzZa3Ro4pWpVxrjNKMmuqTW+5zP0KTDv4s1axoxpVlU4KUvqb5lV0ehk8uN88vHnUXV66PoQVVQqiorpikkjpjxVJt8JRR1T04qMU+mKSRGc5ONkk+SZl6LoOOMpuT3AAAAAAAAAAAAAAAAAAAB5ZGMoSjJJxaaafgzJztLs0uvdVV40ub5J+KPUADOeDKXLaUZL9TW6/Mg/g9i8LrjHzbb/ADNQHisePa8Mmo5xE8d9bRl/4VkLbYSskox2cUuqS9fT0LPS8Sjj9U1bJuculcVHb2X+5MAAAAAAAAAA4lBSi4yipRfKaexlT0rHjOUqoOneTeiD2T9UaEAGdZoGPZOUoOVMpPd8G9H7p7GlCC4wjFecVsjIAAAAAAAAAAAAAAAAAeVstNcJTm9oxTb+gHqeN8o1wlOS2jFNt+iI1r1bNxY/27T8D+S3WzNB7pclNcotHnnjxxx7mSWRJ+TOacTBjCFEJXVpbqDep+r9SksbFk96UvZpM7aa7KGpQlKL9U9n8zfGXPH2xTMmGWsXlUiowrjq2oxSXu9jPlZGVlYVRVUdKb+JrfV9DRr61OUcyC/tpRi0/Dj09iNJI5ZccJRlHnp6eZlncIpurjqTUXvqSfK+RoT0YuO46Uk1JbNProUzouORG+2NUlKtNSSktlJeqNOSbhGT5t6bfMzGlIAAAAAAAAAAAAAAAAAAHKAAAAABhcTcO2w1ux60tTfPD0l6r2NgBdeLPEuWfDPM4l01cUthj2Lbyluj5lhVXXRBQqhGEV0jHZI8AKLlV4bFY8JY3CXFTliXS3lXpnr6wl0f7o8Mf4c4ZxKVdlVjlLfxHKT57t+bNQGgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB//9k="
         alt="Sridevi Mantravadi"
-        onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"/>
-      <div class="photo-placeholder" style="display:none;width:200px;height:240px;border-radius:12px;border:3px solid rgba(85,124,147,0.5);background:rgba(85,124,147,0.15);align-items:center;justify-content:center;flex-direction:column;gap:0.5rem;">
-        <div style="font-size:2.5rem;">👤</div>
-        <div style="font-size:0.75rem;color:var(--teal-light);text-align:center;padding:0 1rem;">Photo loads on<br/>deployed site</div>
-      </div>
+        onerror="this.style.display='none';"/>
       <div class="stats">
         <div class="stat"><div class="stat-n">20+</div><div class="stat-l">Years Enterprise IT</div></div>
         <div class="stat"><div class="stat-n">3</div><div class="stat-l">AI Systems Designed</div></div>
