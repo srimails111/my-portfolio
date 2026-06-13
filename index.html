@@ -48,6 +48,7 @@ nav{background:rgba(8,32,62,0.97);padding:1rem 2rem;display:flex;justify-content
 .so{margin-top:0.875rem;padding-top:0.875rem;border-top:1px solid var(--card-border);font-size:0.78rem;color:var(--teal-light);}
 .sp{margin-top:0.6rem;font-size:0.8rem;color:var(--muted);}
 .sp a{color:var(--teal-light);cursor:pointer;text-decoration:none;}
+.sp a:hover{text-decoration:underline;}
 .csg{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;}
 .cs{background:var(--card-bg);border:1px solid var(--card-border);border-radius:0.875rem;padding:1.5rem;position:relative;transition:border-color 0.2s;}
 .cs:hover{border-color:rgba(85,124,147,0.5);}
@@ -69,9 +70,11 @@ nav{background:rgba(8,32,62,0.97);padding:1rem 2rem;display:flex;justify-content
 .av{width:36px;height:36px;border-radius:50%;background:rgba(85,124,147,0.2);border:1px solid rgba(85,124,147,0.3);display:flex;align-items:center;justify-content:center;font-size:0.72rem;font-weight:500;color:var(--teal-light);flex-shrink:0;}
 .an{font-size:0.82rem;font-weight:500;}
 .ar{font-size:0.72rem;color:var(--muted);}
-.lil{display:inline-flex;align-items:center;gap:0.4rem;color:var(--teal-light);font-size:0.8rem;text-decoration:none;margin-top:1.75rem;border:1px solid rgba(85,124,147,0.3);padding:0.45rem 1.1rem;border-radius:2rem;}
+.lil{display:inline-flex;align-items:center;gap:0.4rem;color:var(--teal-light);font-size:0.8rem;text-decoration:none;margin-top:1.75rem;border:1px solid rgba(85,124,147,0.3);padding:0.45rem 1.1rem;border-radius:2rem;transition:background 0.2s;}
+.lil:hover{background:rgba(85,124,147,0.1);}
 .bg{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;}
-.bc{background:var(--card-bg);border:1px solid var(--card-border);border-radius:0.875rem;padding:1.75rem;display:flex;flex-direction:column;}
+.bc{background:var(--card-bg);border:1px solid var(--card-border);border-radius:0.875rem;padding:1.75rem;display:flex;flex-direction:column;transition:border-color 0.2s,transform 0.2s;}
+.bc:hover{border-color:rgba(85,124,147,0.6);transform:translateY(-2px);}
 .bd{font-size:0.72rem;color:var(--teal-light);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:0.5rem;}
 .bc h3{font-size:0.95rem;font-weight:500;margin-bottom:0.6rem;line-height:1.4;}
 .bc p{font-size:0.84rem;color:var(--muted);line-height:1.65;flex:1;}
@@ -159,6 +162,7 @@ footer{border-top:1px solid var(--card-border);padding:1.5rem 2rem;display:flex;
   </div>
 </div>
 
+<!-- ABOUT -->
 <div id="about">
 <div class="sec">
   <p class="ew">About</p>
@@ -184,34 +188,85 @@ footer{border-top:1px solid var(--card-border);padding:1.5rem 2rem;display:flex;
 </div>
 </div>
 
+<!-- SERVICES -->
 <div id="services" class="alt">
 <div class="sec ctr">
   <p class="ew">Services</p>
   <h2 class="st">What I build with you</h2>
   <div class="dv"></div>
   <div class="svcg">
-    <div class="svc"><div class="si">🧠</div><h3>RAG & AI Knowledge Systems</h3><p>Design and build retrieval-augmented generation pipelines — multi-step extraction, dual-mode personas, conflict detection, and SME routing — that make institutional knowledge queryable and production-ready.</p><div class="so">→ Your team stops losing knowledge when people leave</div><div class="sp">🔒 <a onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Contact for pricing</a></div></div>
-    <div class="svc"><div class="si">⚡</div><h3>Customer Onboarding Automation</h3><p>Intelligent workflows that classify intent, retrieve context, generate responses, and route decisions — with human-in-the-loop review, audit trails, and enterprise API integrations built in.</p><div class="so">→ Onboarding time and manual processing cut by up to 75%</div><div class="sp">🔒 <a onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Contact for pricing</a></div></div>
-    <div class="svc"><div class="si">🔗</div><h3>AI-Powered Automation Workflows</h3><p>Orchestrating LLMs with enterprise APIs and building intelligent automation pipelines — using n8n, Claude API, and enterprise integrations to automate complex business workflows end to end.</p><div class="so">→ Manual processes replaced with intelligent, auditable automation</div><div class="sp">🔒 <a onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Contact for pricing</a></div></div>
-    <div class="svc"><div class="si">🌐</div><h3>Portfolio & Personal Brand Websites</h3><p>Clean, minimal portfolio sites designed for consultants and professionals — built with modern web tech, Supabase integration, contact forms, and strong personal brand positioning.</p><div class="so">→ A site that works as hard as you do</div><div class="sp">🔒 <a onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Contact for pricing</a></div></div>
+    <div class="svc">
+      <div class="si">🧠</div>
+      <h3>RAG & AI Knowledge Systems</h3>
+      <p>Design and build retrieval-augmented generation pipelines — multi-step extraction, dual-mode personas, conflict detection, and SME routing — that make institutional knowledge queryable and production-ready.</p>
+      <div class="so">→ Your team stops losing knowledge when people leave</div>
+      <div class="sp">🔒 <a onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Contact for pricing</a></div>
+    </div>
+    <div class="svc">
+      <div class="si">⚡</div>
+      <h3>Customer Onboarding Automation</h3>
+      <p>Intelligent workflows that classify intent, retrieve context, generate responses, and route decisions — with human-in-the-loop review, audit trails, and enterprise API integrations built in.</p>
+      <div class="so">→ Onboarding time and manual processing cut by up to 75%</div>
+      <div class="sp">🔒 <a onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Contact for pricing</a></div>
+    </div>
+    <div class="svc">
+      <div class="si">🔗</div>
+      <h3>AI-Powered Automation Workflows</h3>
+      <p>Orchestrating LLMs with enterprise APIs and building intelligent automation pipelines — using n8n, Claude API, and enterprise integrations to automate complex business workflows end to end.</p>
+      <div class="so">→ Manual processes replaced with intelligent, auditable automation</div>
+      <div class="sp">🔒 <a onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Contact for pricing</a></div>
+    </div>
+    <div class="svc">
+      <div class="si">🌐</div>
+      <h3>Portfolio & Personal Brand Websites</h3>
+      <p>Clean, minimal portfolio sites designed for consultants and professionals — built with modern web tech, Supabase integration, contact forms, and strong personal brand positioning.</p>
+      <div class="so">→ A site that works as hard as you do</div>
+      <div class="sp">🔒 <a onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Contact for pricing</a></div>
+    </div>
   </div>
 </div>
 </div>
 
+<!-- CASE STUDIES -->
 <div id="work">
 <div class="sec">
   <p class="ew">Case Studies</p>
   <h2 class="st">Work that shipped</h2>
   <div class="dv"></div>
   <div class="csg">
-    <div class="cs"><span class="lk">🔒 on request</span><div class="ct">RAG · AI Knowledge System</div><h3>Living Knowledge System for Enterprise Onboarding</h3><p>Knowledge scattered across recordings, docs, and people's heads doesn't compound — it decays. Built a living knowledge system ingesting KT recordings, source code, API specs, and business rules into a canonical source of truth. Time per question dropped from 4 hours to 2 minutes.</p><div class="pills"><span class="pill">Python</span><span class="pill">Vector DB</span><span class="pill">Claude API</span><span class="pill">C# Web API</span><span class="pill">RAG</span></div></div>
-    <div class="cs"><span class="lk">🔒 on request</span><div class="ct">Agentic Workflow · Automation</div><h3>Customer Onboarding Intelligence Pipeline</h3><p>Built an AI workflow integrating document retrieval, LLM processing, and intelligent response generation — targeting onboarding acceleration with human-in-the-loop review and full audit trail.</p><div class="pills"><span class="pill">n8n</span><span class="pill">Claude API</span><span class="pill">LLM</span><span class="pill">Enterprise APIs</span></div></div>
-    <div class="cs"><span class="lk">🔒 on request</span><div class="ct">AI-Powered Automation</div><h3>Intelligent Document Processing Pipeline</h3><p>Designing automation pipelines and orchestration workflows targeting onboarding acceleration, operational support, and engineering enablement — integrating LLM processing with enterprise APIs.</p><div class="pills"><span class="pill">n8n</span><span class="pill">LLM</span><span class="pill">REST APIs</span><span class="pill">Automation</span></div></div>
-    <div class="cs"><span class="lk">Recent project</span><div class="ct">Portfolio · Personal Brand</div><h3>AI Consultant Portfolio Website</h3><p>Designed and built a complete personal brand portfolio — dark gradient theme, Supabase-backed photo gallery, EmailJS contact form, blog, credentials, and case studies. Single deployable index.html.</p><div class="pills"><span class="pill">HTML/CSS</span><span class="pill">Supabase</span><span class="pill">EmailJS</span><span class="pill">Responsive</span></div></div>
+    <div class="cs">
+      <span class="lk">🔒 on request</span>
+      <div class="ct">RAG · AI Knowledge System</div>
+      <h3>Living Knowledge System for Enterprise Onboarding</h3>
+      <p>Knowledge scattered across recordings, docs, and people's heads doesn't compound — it decays. Built a living knowledge system ingesting KT recordings, source code, API specs, and business rules into a canonical source of truth. Time per question dropped from 4 hours to 2 minutes.</p>
+      <div class="pills"><span class="pill">Python</span><span class="pill">Vector DB</span><span class="pill">Claude API</span><span class="pill">C# Web API</span><span class="pill">RAG</span></div>
+    </div>
+    <div class="cs">
+      <span class="lk">🔒 on request</span>
+      <div class="ct">Agentic Workflow · Automation</div>
+      <h3>Customer Onboarding Intelligence Pipeline</h3>
+      <p>Built an AI workflow integrating document retrieval, LLM processing, and intelligent response generation — targeting onboarding acceleration with human-in-the-loop review and full audit trail.</p>
+      <div class="pills"><span class="pill">n8n</span><span class="pill">Claude API</span><span class="pill">LLM</span><span class="pill">Enterprise APIs</span></div>
+    </div>
+    <div class="cs">
+      <span class="lk">🔒 on request</span>
+      <div class="ct">AI-Powered Automation</div>
+      <h3>Intelligent Document Processing Pipeline</h3>
+      <p>Designing automation pipelines and orchestration workflows targeting onboarding acceleration, operational support, and engineering enablement — integrating LLM processing with enterprise APIs.</p>
+      <div class="pills"><span class="pill">n8n</span><span class="pill">LLM</span><span class="pill">REST APIs</span><span class="pill">Automation</span></div>
+    </div>
+    <div class="cs">
+      <span class="lk">Recent project</span>
+      <div class="ct">Portfolio · Personal Brand</div>
+      <h3>AI Consultant Portfolio Website</h3>
+      <p>Designed and built a complete personal brand portfolio — dark gradient theme, Supabase-backed photo gallery, EmailJS contact form, blog, credentials, and case studies. Single deployable index.html.</p>
+      <div class="pills"><span class="pill">HTML/CSS</span><span class="pill">Supabase</span><span class="pill">EmailJS</span><span class="pill">Responsive</span></div>
+    </div>
   </div>
 </div>
 </div>
 
+<!-- STACK -->
 <div class="alt">
 <div class="stw">
   <p class="ew">Tech I work with</p>
@@ -233,6 +288,7 @@ footer{border-top:1px solid var(--card-border);padding:1.5rem 2rem;display:flex;
 </div>
 </div>
 
+<!-- TESTIMONIALS -->
 <div id="testimonials">
 <div class="sec ctr">
   <p class="ew">Testimonials</p>
@@ -240,13 +296,14 @@ footer{border-top:1px solid var(--card-border);padding:1.5rem 2rem;display:flex;
   <div class="dv"></div>
   <div class="tg">
     <div class="tc"><span class="qm">"</span><p>Sridevi is a strong lead developer focused on delivering reliable products. Since being on the team, she has led several process improvement projects that increased the productivity and reliability of our systems. With her ability to learn new technology seamlessly, she has solidified her role and value with our organization.</p><div class="ta"><div class="av">EP</div><div><div class="an">Eric Peterson</div><div class="ar">Director · UPS</div></div></div></div>
-    <div class="tc"><span class="qm">"</span><p>Sridevi is an excellent team member and a diligent, talented problem solver. She uses good judgment to balance working as a software developer and deployment engineer, and has added great value by helping to automate many of our release processes.</p><div class="ta"><div class="av">JM</div><div><div class="an">Joel Michaels</div><div class="ar">Director of DevOps · M3 Accounting + Analytics</div></div></div></div>
-    <div class="tc"><span class="qm">"</span><p>I've known Sridevi since she started at M3 and have found her to be a great person to work with. She is dependable, professional, persistent, and a very caring person.</p><div class="ta"><div class="av">JS</div><div><div class="an">Julie Stewart PHR, CP</div><div class="ar">Chief Human Resources Officer · M3 Accounting + Analytics</div></div></div></div>
+    <div class="tc"><span class="qm">"</span><p>Sridevi is an excellent team member and a diligent, talented problem solver. She uses good judgment to balance working as a software developer and deployment engineer, and has added great value by helping to automate many of our release processes. She is always enthusiastic about learning new things and takes pride in her work.</p><div class="ta"><div class="av">JM</div><div><div class="an">Joel Michaels</div><div class="ar">Director of DevOps · M3 Accounting + Analytics</div></div></div></div>
+    <div class="tc"><span class="qm">"</span><p>I've known Sridevi since she started at M3 and have found her to be a great person to work with. She is dependable, professional, persistent, and a very caring person. She was a valued member of the web development team and we were sorry to see her leave.</p><div class="ta"><div class="av">JS</div><div><div class="an">Julie Stewart PHR, CP</div><div class="ar">Chief Human Resources Officer · M3 Accounting + Analytics</div></div></div></div>
   </div>
   <a class="lil" href="https://linkedin.com/in/sridevi-m" target="_blank" rel="noopener">View all recommendations on LinkedIn →</a>
 </div>
 </div>
 
+<!-- BLOG -->
 <div id="blog" class="alt">
 <div class="sec">
   <p class="ew">Blog</p>
@@ -261,6 +318,7 @@ footer{border-top:1px solid var(--card-border);padding:1.5rem 2rem;display:flex;
 </div>
 </div>
 
+<!-- CREDENTIALS -->
 <div id="credentials">
 <div class="sec">
   <p class="ew">Credentials & Certifications</p>
@@ -277,6 +335,7 @@ footer{border-top:1px solid var(--card-border);padding:1.5rem 2rem;display:flex;
 </div>
 </div>
 
+<!-- CONTACT -->
 <div id="contact" class="alt">
 <div class="sec ctr">
   <p class="ew">Contact</p>
@@ -349,7 +408,7 @@ function sendEmail(){
   },function(){fs.textContent='Something went wrong. Please email directly.';fs.className='err';});
 }
 
-// ── CHATBOT LOGIC ──
+// ── CHATBOT ──
 let history = [];
 let isOpen = false;
 let greeted = false;
